@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/global.css">
@@ -53,16 +53,6 @@
                 <li><a href="#contacts" class="menu-link">Контакты</a></li>
             </ul>
         </nav>
-        <div class="menu-footer">
-            <p class="menu-contact">Телефон: <a href="tel:+78001234567">+7 (800) 123-45-67</a></p>
-            <p class="menu-contact">Email: <a href="mailto:info@cosmoprosthetics.ru">info@cosmoprosthetics.ru</a></p>
-            <div class="social-icons">
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
-            </div>
-        </div>
     </div>
     <div class="menu-overlay" id="menuOverlay"></div>
 
@@ -80,9 +70,14 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="gradient-overlay"></div>
-            </div>
+            <video src="assets/video/0221.mp4" 
+                   class="hero-video" poster="assets/img/hero-poster.jpg"
+                   autoplay
+                   muted
+                   loop
+                   playsinline
+            >
+            </video>
         </section>
 
         <!-- Оболочка -->
@@ -103,12 +98,17 @@
                             <li><i class="fas fa-check-circle"></i> Легкость в уходе и очистке</li>
                         </ul>
                     </div>
-                    <div class="shell-image">
-                        <div class="image-wrapper">
-                            <div class="image-placeholder">
-                                <i class="fas fa-procedures"></i>
-                                <p>Изображение людей с косметическими оболочками для протезов ног</p>
-                            </div>
+                    <div class="shell-video">
+                        <div class="video-wrapper">
+                            <video class="shell-video-avatar"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                preload="auto"
+                                >
+                            <source src="/assets/video/avatar.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
         </section>
 
         <!-- Отзывы -->
-        <section class="section reviews-section" id="reviews">
+        <!--<section class="section reviews-section" id="reviews">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Отзывы наших клиентов</h2>
@@ -318,10 +318,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
         <!-- Клиенты -->
-        <section class="section clients-section" id="clients">
+        <!--<section class="section clients-section" id="clients">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Наши клиенты</h2>
@@ -370,7 +370,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
         <!-- Вопросы и ответы -->
         <section class="section faq-section" id="faq">

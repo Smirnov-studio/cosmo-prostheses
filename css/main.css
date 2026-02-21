@@ -5,10 +5,8 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(26, 26, 46, 0.9);
-    backdrop-filter: blur(10px);
+    background: transparent;
     padding: 15px 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -25,7 +23,7 @@
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--light-color);
+    color: var(--primary-color);
 }
 
 .logo-highlight {
@@ -65,7 +63,7 @@
 .burger-line {
     height: 3px;
     width: 100%;
-    background: var(--light-color);
+    background: var(--primary-color);
     border-radius: 3px;
     transition: var(--transition);
 }
@@ -81,7 +79,7 @@
     right: -100%;
     width: 320px;
     height: 100%;
-    background: rgba(26, 26, 46, 0.98);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     z-index: 1002;
     display: flex;
@@ -95,17 +93,17 @@
 }
 
 .menu-header {
-    padding: 25px 20px;
+    padding: 15px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .close-menu {
     background: transparent;
     border: none;
-    color: var(--light-color);
+    color: var(--primary-color);
     font-size: 1.5rem;
     cursor: pointer;
     transition: var(--transition);
@@ -126,13 +124,13 @@
 }
 
 .menu-list li {
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 
 .menu-link {
     display: block;
-    padding: 15px 30px;
-    color: var(--light-color);
+    padding: 10px 20px;
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 1.1rem;
     transition: var(--transition);
@@ -141,7 +139,7 @@
 
 .menu-link:hover {
     color: var(--secondary-color);
-    background: rgba(52, 152, 219, 0.1);
+    background: rgba(184, 101, 68, 0.08);
     padding-left: 40px;
 }
 
@@ -163,7 +161,7 @@
 
 .menu-footer {
     padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0,0,0,0.06);
 }
 
 .menu-contact {
@@ -191,7 +189,7 @@
     height: 40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-    color: var(--light-color);
+    color: var(--primary-color);
     transition: var(--transition);
 }
 
@@ -227,27 +225,43 @@
     overflow: hidden;
 }
 
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.48) 0%,
+        rgba(0,0,0,0.28) 35%,
+        rgba(0,0,0,0.00) 70%
+    );
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
-    color: var(--light-color);
+    max-width: 760px;
+    color: #FFFFFF;
+    padding: 38px 38px;
+    border-radius: 22px;
+    background: transparent;
 }
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    animation: fadeInUp 1s ease;
+    font-size: 3.9rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.15;
+    letter-spacing: -1px;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     margin-bottom: 30px;
-    color: #ddd;
-    animation: fadeInUp 1s ease 0.2s both;
+    color: rgba(255,255,255,0.88);
 }
 
 .hero-buttons {
@@ -256,13 +270,15 @@
     animation: fadeInUp 1s ease 0.4s both;
 }
 
-.hero-image {
+.hero-video {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 50%;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+    object-fit: cover;
+    filter: blur(5px);
+    z-index: 0;
 }
 
 .gradient-overlay {
@@ -312,15 +328,27 @@
     font-size: 1.2rem;
 }
 
-.shell-image {
+.shell-video {
     flex: 1;
 }
 
-.image-wrapper {
+.video-wrapper {
     position: relative;
-    border-radius: var(--border-radius);
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    border: 1px solid rgba(0,0,0,0.06);
+    background: #000;           /* на случай подгрузки */
+    aspect-ratio: 9 / 16;       /* так красиво держит вертикаль */
+    max-width: 420px;           /* чтобы не было огромным на десктопе */
+    margin-left: auto;          /* вправо в колонке */
+}
+
+.shell-video-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .image-placeholder {
@@ -355,7 +383,8 @@
 }
 
 .feature-card {
-    background: var(--card-bg);
+    background: var(--card-gradient);
+    border: 1px solid var(--border-soft);
     border-radius: var(--border-radius);
     padding: 30px;
     box-shadow: var(--shadow);
@@ -374,7 +403,7 @@
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-hover);
 }
 
 .feature-icon {
@@ -406,7 +435,8 @@
 }
 
 .variant-card {
-    background: var(--card-bg);
+    background: var(--card-gradient);
+    border: 1px solid var(--border-soft);
     border-radius: var(--border-radius);
     padding: 30px;
     box-shadow: var(--shadow);
@@ -424,6 +454,7 @@
 
 .variant-card:hover {
     transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
 }
 
 .variant-title {
@@ -444,7 +475,7 @@
 }
 
 .variant-tag {
-    background: rgba(52, 152, 219, 0.1);
+    background: rgba(184, 101, 68, 0.08);
     color: var(--secondary-color);
     padding: 5px 15px;
     border-radius: 50px;
@@ -462,7 +493,8 @@
 }
 
 .order-step {
-    background: var(--card-bg);
+    background: var(--card-gradient);
+    border: 1px solid var(--border-soft);
     border-radius: var(--border-radius);
     padding: 30px;
     box-shadow: var(--shadow);
@@ -526,7 +558,8 @@
 }
 
 .review-card {
-    background: var(--card-bg);
+    background: var(--card-gradient);
+    border: 1px solid var(--border-soft);
     border-radius: var(--border-radius);
     padding: 30px;
     box-shadow: var(--shadow);
@@ -551,7 +584,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: rgba(52, 152, 219, 0.1);
+    background: rgba(184, 101, 68, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -614,7 +647,8 @@
 }
 
 .faq-item {
-    background: var(--card-bg);
+    background: var(--card-gradient);
+    border: 1px solid var(--border-soft);
     border-radius: var(--border-radius);
     margin-bottom: 15px;
     overflow: hidden;
@@ -641,7 +675,7 @@
 }
 
 .faq-question:hover {
-    background: rgba(52, 152, 219, 0.05);
+    background: rgba(184, 101, 68, 0.06);
 }
 
 .faq-question h3 {
@@ -689,6 +723,7 @@
 .logo-placeholder {
     height: 120px;
     background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-soft);
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
@@ -826,38 +861,67 @@
     transition: var(--transition);
 }
 
-/* Стили для select - КАСТОМНЫЙ ВЫПАДАЮЩИЙ СПИСОК */
+
+/* ===== Select — premium unified style ===== */
+
 .select-wrapper {
     position: relative;
     width: 100%;
 }
 
+/* Стрелка */
 .select-wrapper::after {
-    content: '▼';
+    content: '';
     position: absolute;
     top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    color: var(--secondary-color);
-    font-size: 0.8rem;
+    right: 18px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    transform: translateY(-50%) rotate(45deg);
     pointer-events: none;
     transition: var(--transition);
 }
 
-.form-group select {
+/* Сам select */
+.application-section .form-group select {
     width: 100%;
-    padding: 15px 40px 15px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 16px 48px 16px 18px;
     border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    border: 1px solid rgba(0,0,0,0.12);
+    background: rgba(255,255,255,0.95);
+    color: var(--primary-color);
     font-family: var(--font-body);
     font-size: 1rem;
+    font-weight: 500;
     transition: var(--transition);
-    appearance: none; /* Убираем стандартную стрелку */
-    -webkit-appearance: none; /* Для Safari */
-    -moz-appearance: none; /* Для Firefox */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     cursor: pointer;
+    color-scheme: light;
+}
+
+/* Hover */
+.application-section .form-group select:hover {
+    border-color: rgba(184,101,68,0.5);
+}
+
+/* Focus */
+.application-section .form-group select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 4px rgba(184,101,68,0.12);
+}
+
+/* Option (desktop) */
+.application-section .form-group select option {
+    background: var(--light-color);
+    color: var(--primary-color);
+    font-family: var(--font-body);
+    border: 1px solid rgba(184,101,68,0.5);
+    border-radius: 10px;
 }
 
 /* Стили для option */
@@ -928,7 +992,7 @@
 .contacts-title {
     font-size: 1.8rem;
     margin-bottom: 30px;
-    color: var(--light-color);
+    color: var(--primary-color);
 }
 
 .contact-item {
@@ -939,7 +1003,7 @@
 .contact-icon {
     width: 50px;
     height: 50px;
-    background: rgba(52, 152, 219, 0.1);
+    background: rgba(184, 101, 68, 0.08);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -952,7 +1016,7 @@
 .contact-details h4 {
     font-size: 1.2rem;
     margin-bottom: 5px;
-    color: var(--light-color);
+    color: var(--primary-color);
 }
 
 .contact-details p, 
@@ -965,167 +1029,94 @@
     color: var(--secondary-color);
 }
 
-/* Футер */
-.footer {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 60px 0 30px;
-    color: #ccc;
+
+/* === Premium overrides (final) === */
+.hero-title { letter-spacing: -0.8px; }
+.hero-subtitle { max-width: 42ch; }
+.feature-card, .variant-card, .review-card, .order-step, .faq-item { box-shadow: var(--shadow); }
+.feature-card:hover, .variant-card:hover, .review-card:hover, .order-step:hover, .faq-item:hover { box-shadow: var(--shadow-hover); }
+
+.application-section .form-group label { color: var(--primary-color); }
+.application-section input,
+.application-section textarea,
+.application-section select {
+    background: rgba(255,255,255,0.88);
+    color: var(--primary-color);
+    border: 1px solid rgba(0,0,0,0.12);
+}
+.application-section input:focus,
+.application-section textarea:focus,
+.application-section select:focus {
+    border-color: rgba(184,101,68,0.60);
+    box-shadow: 0 0 0 4px rgba(184,101,68,0.12);
 }
 
-.footer-content {
+
+/* ===== Premium Footer ===== */
+.footer{
+    background: #2E2A27;
+    color: rgba(245,241,234,0.88);
+    padding: 70px 0 28px;
+    position: relative;
+    overflow: hidden;
+}
+.footer::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(184,101,68,0.18) 0%, transparent 45%),
+      radial-gradient(circle at 80% 70%, rgba(156,122,90,0.14) 0%, transparent 50%);
+    opacity: 0.45;
+    pointer-events:none;
+}
+.footer .container{ position: relative; z-index: 1; }
+.footer-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 46px;
+    align-items: start;
 }
-
-.footer-tagline {
+.footer-logo .logo-text{
+    color: rgba(245,241,234,0.98);
+}
+.footer-tagline{
     margin-top: 10px;
-    font-style: italic;
-    color: #aaa;
+    color: rgba(245,241,234,0.72);
+    max-width: 42ch;
 }
-
-.footer-title {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    color: var(--light-color);
+.footer-title{
+    font-size: 1.05rem;
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+    color: rgba(245,241,234,0.94);
 }
-
-.footer-list {
-    list-style: none;
-}
-
-.footer-list li {
-    margin-bottom: 10px;
-}
-
-.footer-list a {
-    color: #ccc;
-    text-decoration: none;
+.footer-list{ list-style:none; }
+.footer-list li{ margin-bottom: 10px; }
+.footer-list a{
+    color: rgba(245,241,234,0.78);
+    text-decoration:none;
     transition: var(--transition);
 }
-
-.footer-list a:hover {
-    color: var(--secondary-color);
-    padding-left: 5px;
+.footer-list a:hover{
+    color: rgba(245,241,234,1);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.footer-bottom{
+    margin-top: 44px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+    text-align:center;
+}
+.copyright{
+    color: rgba(245,241,234,0.62);
+    font-size: 0.95rem;
+}
+/* Footer responsive */
+@media (max-width: 992px){
+  .footer-content{ grid-template-columns: 1fr; gap: 28px; }
 }
 
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.copyright {
-    color: #aaa;
-}
 
 
-/* Адаптивность */
-@media (max-width: 992px) {
-    .hero-title {
-        font-size: 2.8rem;
-    }
-    
-    .hero-image {
-        width: 40%;
-    }
-    
-    .shell-content,
-    .contacts-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .step-buttons {
-        flex-direction: column;
-    }
-    
-    .step-buttons .btn {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .section {
-        padding: 60px 0;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .hero-title {
-        font-size: 2.3rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .hero-image {
-        width: 100%;
-        opacity: 0.3;
-    }
-    
-    .features-grid,
-    .variants-grid,
-    .reviews-slider {
-        grid-template-columns: 1fr;
-    }
-    
-    .clients-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-    
-    .order-step {
-        padding: 25px;
-    }
-    
-    .step-number {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        left: -15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-    
-    .hero-title {
-        font-size: 1.8rem;
-    }
-    
-    .section-title {
-        font-size: 1.6rem;
-    }
-    
-    .btn {
-        padding: 12px 25px;
-    }
-    
-    .side-menu {
-        width: 280px;
-    }
-    
-    .clients-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .partners-list {
-        gap: 20px;
-    }
-    
-    .partner-logo {
-        min-width: 120px;
-    }
-}
