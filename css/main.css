@@ -1113,10 +1113,7 @@
     color: rgba(245,241,234,0.62);
     font-size: 0.95rem;
 }
-/* Footer responsive */
-@media (max-width: 992px){
-  .footer-content{ grid-template-columns: 1fr; gap: 28px; }
-}
+
 
 
 
