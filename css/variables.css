@@ -3,6 +3,7 @@
     /* Цвета */
     --primary-color: #1F1F1F;           /* Основной текст */
     --secondary-color: #B86544;         /* Терракота (CTA, акцент) */
+    --btn-scroll-to-top-color: #b6765d;         /* Терракота (CTA, акцент) */
     --accent-color: #9C7A5A;            /* Теплый песочно-бронзовый */
 
     --light-color: #F5F1EA;             /* Основной фон */

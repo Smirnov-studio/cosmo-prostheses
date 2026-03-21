@@ -84,16 +84,7 @@
     .container {
         max-width: 720px;
     }
-    
-    /* Обложка */
-    /*.hero::before {
-        background: linear-gradient(
-            90deg,
-            rgba(0,0,0,0.7) 0%,
-            rgba(0,0,0,0.5) 50%,
-            rgba(0,0,0,0.3) 100%
-        );
-    }*/
+
     
     .hero-content {
         max-width: 100%;
@@ -284,7 +275,7 @@
 /* Маленькие мобильные (до 575px) */
 @media (max-width: 575px) {
     .hero-video {
-      object-position: 65% center;
+      object-position: center;
     }
 
     .container {

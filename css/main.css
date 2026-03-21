@@ -24,11 +24,13 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
+    text-transform: uppercase;
 }
 
 .logo-highlight {
     color: var(--secondary-color);
     position: relative;
+    text-transform: uppercase;
 }
 
 .logo-highlight::after {
@@ -290,6 +292,44 @@
     background: linear-gradient(to left, transparent 0%, rgba(26, 26, 46, 0.8) 70%, rgba(26, 26, 46, 1) 100%);
 }
 
+/* кнопка скрола вверх старницы*/ 
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:active {
+    transform: translateY(0);
+}
+
 /* Секция Оболочка */
 .shell-section {
     background: rgba(255, 255, 255, 0.05);
@@ -303,7 +343,7 @@
 
 .shell-text {
     flex: 1;
-    color: #ddd;
+    color: var(--primary-color);
 }
 
 .shell-text p {
@@ -481,6 +521,12 @@
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+.card-image {
+    display: block;
+    width: 100%; 
+    height: auto; 
 }
 
 /* Порядок оформления */

@@ -150,3 +150,24 @@ document.addEventListener('DOMContentLoaded', function() {
             .forEach(el => el.classList.add('animated'));
     }
 });
+
+// Обработка ресайза окна
+window.addEventListener('resize', function() {
+    // Закрываем меню на десктопе если оно открыто
+    if (window.innerWidth > 992) {
+        if (sideMenu.classList.contains('active')) {
+            sideMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+});
+
+// Предотвращаем скролл body когда открыто меню
+function toggleBodyScroll(disable) {
+    if (disable) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+}

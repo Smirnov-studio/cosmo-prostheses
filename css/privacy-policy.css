@@ -1,0 +1,108 @@
+.privacy-policy__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  margin-right: 350px;
+  margin-left: 350px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.title__privacy-policy {
+  text-transform: uppercase;
+}
+
+.text__privacy-policy-mod {
+  font-weight: bold;
+}
+
+.text__privacy-policy {
+  font-style: italic;
+}
+
+.privacy-policy__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  margin-right: 350px;
+  margin-left: 350px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.title__privacy-policy {
+  text-transform: uppercase;
+}
+
+.text__privacy-policy-mod {
+  font-weight: bold;
+}
+
+.text__privacy-policy {
+  font-style: italic;
+}
+
+/* Планшеты (от 768px до 1024px) */
+@media screen and (max-width: 1024px) {
+  .privacy-policy__container {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Планшеты малые и большие мобильные (до 768px) */
+@media screen and (max-width: 768px) {
+  .privacy-policy__container {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+}
+
+/* Мобильные устройства (до 480px) */
+@media screen and (max-width: 480px) {
+  .privacy-policy__container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+}
+
+/* Очень маленькие экраны (до 320px) */
+@media screen and (max-width: 320px) {
+  .privacy-policy__container {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+}

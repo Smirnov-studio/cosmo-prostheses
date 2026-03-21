@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmoprosthetics - Косметические оболочки для протезов</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +12,9 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <title>ОПОРА-КОМФОРТ - Косметические оболочки для протезов</title>
 </head>
 <body>
     <!-- Навигация -->
@@ -21,7 +22,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <span class="logo-text">Cosmo<span class="logo-highlight">prosthetics</span></span>
+                    <span class="logo-text">опора-<span class="logo-highlight">комфорт</span></span>
                 </a>
                 <div class="burger-menu" id="burgerMenu">
                     <span class="burger-line"></span>
@@ -35,7 +36,7 @@
     <!-- Боковое меню -->
     <div class="side-menu" id="sideMenu">
         <div class="menu-header">
-            <span class="logo-text">Cosmo<span class="logo-highlight">prosthetics</span></span>
+            <span class="logo-text">опора-<span class="logo-highlight">комфорт</span></span>
             <button class="close-menu" id="closeMenu">
                 <i class="fas fa-times"></i>
             </button>
@@ -46,8 +47,8 @@
                 <li><a href="#features" class="menu-link">Технические особенности</a></li>
                 <li><a href="#variants" class="menu-link">Варианты оболочек</a></li>
                 <li><a href="#order" class="menu-link">Порядок оформления</a></li>
-                <li><a href="#reviews" class="menu-link">Отзывы</a></li>
-                <li><a href="#clients" class="menu-link">Клиенты</a></li>
+                <!--<li><a href="#reviews" class="menu-link">Отзывы</a></li> -->
+                <!-- <li><a href="#clients" class="menu-link">Клиенты</a></li> -->
                 <li><a href="#faq" class="menu-link">Вопросы и ответы</a></li>
                 <li><a href="#partners" class="menu-link">Партнёры</a></li>
                 <li><a href="#application" class="menu-link">Заявка</a></li>
@@ -64,14 +65,14 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">Косметические оболочки для протезов ног</h1>
-                    <p class="hero-subtitle">Верните естественность и эстетику вашим движениям с индивидуальными оболочками Cosmoprosthetics</p>
+                    <p class="hero-subtitle">оплата по электронному сертификату за счёт государства</p>
                     <div class="hero-buttons">
                         <a href="#application" class="btn btn-primary">Оставить заявку</a>
                         <a href="#order" class="btn btn-secondary">Узнать больше</a>
                     </div>
                 </div>
             </div>
-            <video src="assets/video/0221.mp4" 
+            <video src="assets/video/cover.mp4" 
                    class="hero-video" poster="assets/img/hero-poster.jpg"
                    autoplay
                    muted
@@ -79,6 +80,9 @@
                    playsinline
             >
             </video>
+            <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Наверх">
+                ↑
+            </button>
         </section>
 
         <!-- Оболочка -->
@@ -185,28 +189,66 @@
                     <p class="section-subtitle">Мы предлагаем различные типы оболочек для разных потребностей и уровней ампутации</p>
                 </div>
                 <div class="variants-grid">
+                    <!-- Карточка 1: Для голени -->
                     <div class="variant-card">
-                        <h3 class="variant-title">Для голени</h3>
-                        <p class="variant-description">Идеальное решение для ампутаций ниже колена. Легкая, анатомически точная оболочка с имитацией мышц и вен.</p>
-                        <div class="variant-tags">
-                            <span class="variant-tag">Легкая</span>
-                            <span class="variant-tag">Анатомическая</span>
+                        <!-- ИЗОБРАЖЕНИЕ ВВЕРХУ КАРТОЧКИ -->
+                        <div class="card-image">
+                            <img src="./assets/img/leg.jpg" 
+                                 alt="Протезная оболочка для голени">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="variant-title">Для голени</h3>
+                            <p class="variant-description">Идеальное решение для ампутаций ниже колена. Легкая, анатомически точная оболочка с имитацией мышц и вен.</p>
+                            <div class="variant-tags">
+                                <span class="variant-tag">Легкая</span>
+                                <span class="variant-tag">Анатомическая</span>
+                            </div>
+                            <!-- ЦЕНА ВНИЗУ КАРТОЧКИ -->
+                            <div class="price">
+                                24 990 ₽
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Карточка 2: Для бедра -->
                     <div class="variant-card">
-                        <h3 class="variant-title">Для бедра</h3>
-                        <p class="variant-description">Полноразмерная оболочка для ампутаций выше колена. Полная имитация мышц бедра с естественными контурами.</p>
-                        <div class="variant-tags">
-                            <span class="variant-tag">Полноразмерная</span>
-                            <span class="variant-tag">Естественные контуры</span>
+                        <!-- ИЗОБРАЖЕНИЕ ВВЕРХУ КАРТОЧКИ -->
+                        <div class="card-image">
+                            <img src="./assets/img/hip.jpg" 
+                                alt="Протезная оболочка для бедра" >
+                        </div>
+                        <div class="card-content">
+                            <h3 class="variant-title">Для бедра</h3>
+                            <p class="variant-description">Полноразмерная оболочка для ампутаций выше колена. Полная имитация мышц бедра с естественными контурами.</p>
+                            <div class="variant-tags">
+                                <span class="variant-tag">Полноразмерная</span>
+                                <span class="variant-tag">Естественные контуры</span>
+                            </div>
+                            <!-- ЦЕНА ВНИЗУ КАРТОЧКИ -->
+                            <div class="price">
+                                34 990 ₽
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Карточка 3: Спортивная -->
                     <div class="variant-card">
-                        <h3 class="variant-title">Спортивная</h3>
-                        <p class="variant-description">Специальная оболочка для активного образа жизни. Повышенная прочность и влагостойкость.</p>
-                        <div class="variant-tags">
-                            <span class="variant-tag">Прочная</span>
-                            <span class="variant-tag">Влагостойкая</span>
+                        <!-- ИЗОБРАЖЕНИЕ ВВЕРХУ КАРТОЧКИ -->
+                        <div class="card-image">
+                            <img src="/assets/img/leg-sport.jpg" 
+                                alt="Спортивная протезная оболочка">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="variant-title">Спортивная</h3>
+                            <p class="variant-description">Специальная оболочка для активного образа жизни. Повышенная прочность и влагостойкость.</p>
+                            <div class="variant-tags">
+                                <span class="variant-tag">Прочная</span>
+                                <span class="variant-tag">Влагостойкая</span>
+                            </div>
+                            <!-- ЦЕНА ВНИЗУ КАРТОЧКИ -->
+                            <div class="price">
+                                29 990 ₽
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -384,6 +426,23 @@
                 <div class="faq-list">
                     <div class="faq-item">
                         <div class="faq-question">
+                            <h3>Как получить оболочку на протез по электронному сертификату?</h3>
+                            <span class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Сначала проверьте свой ИПРА, если в нем есть пункт 08-08-07 
+                            "Косметическая оболочка на протез нижней конечности", 
+                            то достаточно получить электронный сертификат на портале Госуслуги и обратиться к нам. 
+                            Если такого пункта нет, то проверьте наличие пункта "Жесткая (мягкая) облицовка" 
+                            в составе протеза. Если такой пункт есть, то вы можете обратиться напрямую в свой протезный центр, 
+                            чтобы они заказали оболочку на ваш протез у нас. 
+                            Если в ИПРА нет таких пунктов, стоит обратиться в МСЭ за внесением в неё изменений.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
                             <h3>Как долго изготавливается индивидуальная оболочка?</h3>
                             <span class="faq-toggle">
                                 <i class="fas fa-chevron-down"></i>
@@ -480,7 +539,10 @@
                     <p class="section-subtitle">Наш специалист свяжется с вами в течение 24 часов для бесплатной консультации</p>
                 </div>
                 <div class="application-form">
-                    <form id="contactForm" action="https://formspree.io/f/mzbldvke" method="POST">
+                    <form 
+                        id="contactForm" 
+                        action="https://formspree.io/f/mzdaybje" 
+                        method="POST">
                         <div class="form-group">
                             <label for="name">Имя *</label>
                             <input type="text" id="name" name="name" required>
@@ -511,7 +573,7 @@
                         </div>
                         <div class="form-footer">
                             <button type="submit" class="btn btn-primary">Отправить заявку</button>
-                            <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                            <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="/privacy-policy.html">политикой конфиденциальности</a></p>
                         </div>
                         <div id="formMessage" class="form-message"></div>
                     </form>
@@ -527,13 +589,13 @@
                     <p class="section-subtitle">Свяжитесь с нами удобным для вас способом</p>
                 </div>
                 <div class="contacts-content">
-                    <div class="contacts-map">
-                        <div class="map-placeholder">
-                            <i class="fas fa-map-marked-alt"></i>
-                            <p>Фрейм карты Яндекс.Карт</p>
-                            <p class="map-coordinates">55.7558° с.ш., 37.6173° в.д.</p>
-                        </div>
-                    </div>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6431f95ddded9b264736512587f8e746ceca8de93fa569df343471dfb6b26dac&amp;source=constructor" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0"
+                            allowfullscreen="true"
+                            style="position: relative; display: block; border-radius: 8px;">
+                    </iframe>
                     <div class="contacts-info">
                         <h3 class="contacts-title">Наши контакты</h3>
                         <div class="contact-item">
@@ -542,7 +604,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Адрес</h4>
-                                <p>г. Москва, ул. Протезная, д. 15, офис 305</p>
+                                <p>г. Краснодар, ул. Круговая, д. 22</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -551,7 +613,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Телефон</h4>
-                                <p><a href="tel:+78001234567">+7 (800) 123-45-67</a></p>
+                                <p><a href="tel:+78001234567">+7 (988) 245-80-09</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -560,7 +622,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Email</h4>
-                                <p><a href="mailto:info@cosmoprosthetics.ru">info@cosmoprosthetics.ru</a></p>
+                                <p><a href="mailto:info@cosmoprosthetics.ru">opora-komfort@mail.ru</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -585,7 +647,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="logo-text">Cosmo<span class="logo-highlight">prosthetics</span></span>
+                    <span class="logo-text">опора-<span class="logo-highlight">комфорт</span></span>
                     <p class="footer-tagline">Вернем естественность вашим движениям</p>
                 </div>
                 <div class="footer-links">
@@ -600,17 +662,21 @@
                 <div class="footer-links">
                     <h4 class="footer-title">Контакты</h4>
                     <ul class="footer-list">
-                        <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
-                        <li><a href="mailto:info@cosmoprosthetics.ru">info@cosmoprosthetics.ru</a></li>
-                        <li>г. Москва, ул. Протезная, д. 15</li>
+                        <li><a href="tel:+78001234567">+7 (988) 245-80-09</a></li>
+                        <li><a href="mailto:info@cosmoprosthetics.ru">opora-komfort@mail.ru</a></li>
+                        <li>г. Краснодар, ул. Круговая, д. 22</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">© 2026 Cosmoprosthetics. Все права защищены.</p>
+                <p class="copyright">© 2026 ОПОРА-КОМФОРТ. Все права защищены.</p>
             </div>
         </div>
     </footer>
   </body>
-  <script src="./main.js"></script>
+  <!-- Подключаем IMask для маски телефона -->
+  <script src="https://unpkg.com/imask"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/button-scroll-to-top.js"></script>
 </html>
