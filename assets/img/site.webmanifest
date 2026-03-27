@@ -1,19 +1,22 @@
 {
-    "name": "Cosmetic Covers",
-    "short_name": "Covers",
+    "name": "ОПОРА-КОМФОРТ",
+    "short_name": "ОПОРА",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "/assets/img/android-chrome-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "/android-chrome-512x512.png",
+            "src": "/assets/img/android-chrome-512x512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         }
     ],
-    "theme_color": "#B86544",
-    "background_color": "#F5F1EA",
-    "display": "standalone"
+    "theme_color": "#ffffff",
+    "background_color": "#C06E52", 
+    "display": "standalone",
+    "start_url": "/"
 }

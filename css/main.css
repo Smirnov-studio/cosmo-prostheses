@@ -1119,7 +1119,7 @@
 .footer .container{ position: relative; z-index: 1; }
 .footer-content{
     display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
     gap: 46px;
     align-items: start;
 }
